@@ -264,7 +264,7 @@ const productos = [
     // ==================================================
 
     {
-        nombre: "Casaca Escolar Modelo 2",
+        nombre: "Casaca  Modelo 2",
         categoria: "casacas",
         precio: "Consultar",
         imagen: "img/productos/casacas/2020289618862_2.jpg",
@@ -272,7 +272,7 @@ const productos = [
     },
 
     {
-        nombre: "Casaca Escolar Modelo 3",
+        nombre: "Casaca  Modelo 3",
         categoria: "casacas",
         precio: "Consultar",
         imagen: "img/productos/casacas/casaca-deportiva-hombre-adidas-sereno-ajustado_JZ0263_1.png",
@@ -288,7 +288,7 @@ const productos = [
     },
 
     {
-        nombre: "Casaca Escolar Modelo 4",
+        nombre: "Casaca  Modelo 4",
         categoria: "casacas",
         precio: "Consultar",
         imagen: "img/productos/casacas/H98cdc223ee8345edab0f4867f050853bJ.png_300x300.png",
