@@ -378,8 +378,102 @@ const productos = [
         precio: "Consultar",
         imagen: "img/productos/Ropa deportiva/Screenshot_5.png",
         demostrativo: false
-    }
+    },
 
+// ======================================================
+// Polos camiseros
+// ======================================================
+    
+    {
+        nombre: "Polo Camiseros Modelo 1",
+        categoria: "Polos-Camiseros",
+        precio: "Consultar",
+        imagen: "img/productos/Polos camiseros/DSC01695-scaled.jpg",
+        demostrativo: false
+    },
+    {
+        nombre: "Polo Camiseros Modelo 2",
+        categoria: "Polos-Camiseros",
+        precio: "Consultar",
+        imagen: "img/productos/Polos camiseros/images.jpg",
+        demostrativo: false
+    },
+    {
+        nombre: "Polo Camiseros Modelo 3",
+        categoria: "Polos-Camiseros",
+        precio: "Consultar",
+        imagen: "img/productos/Polos camiseros/imagess.jfif",
+        demostrativo: false
+    },
+    {
+        nombre: "Polo Camiseros Modelo 4",
+        categoria: "Polos-Camiseros",
+        precio: "Consultar",
+        imagen: "img/productos/Polos camiseros/imageUrl_1.webp",
+        demostrativo: false
+    },
+    {
+        nombre: "Polo Camiseros Modelo 5",
+        categoria: "Polos-Camiseros",
+        precio: "Consultar",
+        imagen: "img/productos/Polos camiseros/Polo-camisero-Slim-Fit---Azul-marino---H-M-PE.png",
+        demostrativo: false
+    },
+    {
+        nombre: "Polo Camiseros Modelo 6",
+        categoria: "Polos-Camiseros",
+        precio: "Consultar",
+        imagen: "img/productos/Polos camiseros/POLOS-PIQUET-2.jpg",
+        demostrativo: false
+    },
+    
+// ======================================================
+// Casacas de Promocion de Colegio
+// ======================================================
+    
+{
+        nombre: "Casacas de Promocion de Colegio Modelo 1",
+        categoria: "Casacas-de-Promocion",
+        precio: "Consultar",
+        imagen: "img/productos/Casacas de Promocion de Colegio/jpx-casacas-promocion-colegios-universidades-empresas-09-imagenes-07-300x300.jpg",
+        demostrativo: false
+    },
+    {
+        nombre: "Casacas de Promocion de Colegio Modelo 2",
+        categoria: "Casacas-de-Promocion",
+        precio: "Consultar",
+        imagen: "img/productos/Casacas de Promocion de Colegio/casacas-de-promocion-poli-algodon.png",
+        demostrativo: false
+    },
+    {
+        nombre: "Casacas de Promocion de Colegio Modelo 3",
+        categoria: "Casacas-de-Promocion",
+        precio: "Consultar",
+        imagen: "img/productos/Casacas de Promocion de Colegio/im4ages.jfif",
+        demostrativo: false
+    },
+    {
+        nombre: "Casacas de Promocion de Colegio Modelo 4",
+        categoria: "Casacas-de-Promocion",
+        precio: "Consultar",
+        imagen: "img/productos/Casacas de Promocion de Colegio/images.jpg",
+        demostrativo: false
+    },
+    {
+        nombre: "Casacas de Promocion de Colegio Modelo 6",
+        categoria: "Casacas-de-Promocion",
+        precio: "Consultar",
+        imagen: "img/productos/Casacas de Promocion de Colegio/43735daa205d52cc37f5e2729eedd381.jpg",
+        demostrativo: false
+    },
+    {
+        nombre: "Casacas de Promocion de Colegio Modelo 7",
+        categoria: "Casacas-de-Promocion",
+        precio: "Consultar",
+        imagen: "img/productos/Casacas de Promocion de Colegio/imag1es.jfif",
+        demostrativo: false
+    },
+    
 ];
 
 
@@ -396,21 +490,38 @@ const contenedor = document.getElementById("productos");
 
 function crearMensajeWhatsApp(producto) {
 
+    // URL pública de tu página
+    const dominio = "https://julinhosports.netlify.app/";
+
+    // Convertimos la ruta de la imagen
+    // en una URL pública
+    const imagenURL =
+        dominio + producto.imagen
+            .split("/")
+            .map(parte => encodeURIComponent(parte))
+            .join("/");
+
+
     const mensaje =
 
         `Hola, JULINHOS SPORT 👋\n\n` +
 
         `Estoy interesado en el siguiente producto:\n\n` +
 
-        `Producto: ${producto.nombre}\n` +
+        `🧵 Producto: ${producto.nombre}\n` +
 
-        `Precio: ${producto.precio}\n\n` +
+        `💰 Precio: ${producto.precio}\n\n` +
+
+        `📷 Imagen del producto:\n` +
+
+        `${imagenURL}\n\n` +
 
         `¿Podrían brindarme información y cotización?`;
 
-    return encodeURIComponent(mensaje);
-}
 
+    return encodeURIComponent(mensaje);
+
+}
 
 // ======================================================
 // MOSTRAR PRODUCTOS
